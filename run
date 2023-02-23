@@ -1,0 +1,4 @@
+#!/bin/sh
+# github.com/n0nexist/LanJam
+clear
+python3 -W ignore lanjam.py
