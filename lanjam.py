@@ -183,6 +183,9 @@ def mainprompt():
                     log("info",f"terminating thread n.{c}")
                     x.terminate()
                     thread_list.remove(x)
+                log("info","restoring arp tables for every target")
+                for x in target_list:
+                    restorearp(my_gateway, x)
                 
             elif cmd.startswith("quit"):
                 log("warning","exiting due to user input")
